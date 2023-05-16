@@ -22,7 +22,8 @@ body{
         align-items:center;
         width: 350px;
         border-radius: 20px;
-        background: $color-annual;
+        background: white;
+        box-shadow: 0px 18px 20px -6px hsl(245, 75%, 52%,0.2);
         .hero-img{
             width: 100%;
             border-radius: 20px 20px 0 0;
@@ -30,13 +31,14 @@ body{
         }
         .content{
             display: flex;
-            width: 90%;
+            width: 88%;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
             .title{
                 font-weight:900;
-                margin: 20px 0 15px;
+                margin: 35px 0 15px;
             }
             .text{
                 text-align: center;
@@ -46,30 +48,75 @@ body{
             }
             .content-annual-plan{
                 display: flex;
-                width: 90%;
+                width: 100%;
+                box-sizing: border-box;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
                 padding: 15px 10px;
-                background: red;
+                background: $background-annual;
                 border-radius: 10px;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
+
+                //annual plan
                 .annual-plan{
                     display: flex;
+                    img{
+                        margin-left: 5px;
+                    }
+                    //description
                     .description{
                         margin-left: 10px;
-                    .plan-title{
-                        font-size: 18px;
-                        font-weight: 700;
-                    }
-                    .price{
-                        color:$text;
-                        font-size:16px;
-                    }
+                        .plan-title{
+                            font-size: 16px;
+                            font-weight: 700;
+                        }
+                        .price{
+                            color:$text;
+                            font-size:16px;
+                        }
                          
+                    }//end of description
+                }//end of annual plan
+                .change{
+                    .link{
+                        color:$color-button;
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin-right: 5px;
                     }
                 }
+            }//end of content annual
+            .button{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .btn{
+                    width: 100%;
+                    text-align: center;
+                    background-color: $color-button;
+                    color:$color-annual;
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                    padding: 15px 10px;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    
+                }
+                .shadow{
+                    box-shadow: 0px 18px 20px -5px $color-button-opacity;
+                    z-index: 1;
+                }
+                .btn-cancel{
+                    background: transparent;
+                    color: $text;
+                    margin-bottom: 25px;
+                }
             }
-        }
+        }//end of content
     }
 }
